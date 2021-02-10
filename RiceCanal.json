@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"Sheet1","startColumn":"D","endColumn":"F","startRow":"2","endRow":"365","comment":"","rule":"Individual: Rice_Canal \n  Types: Canal \n  Facts: GuageReading @D* , \n         \tDischargeInCusecs @E* ,\n\tGuagingDate @F*","active":true}]}
