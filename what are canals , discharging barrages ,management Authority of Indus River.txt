@@ -1,0 +1,16 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sm:<https://sites.google.com/view/smfis#>
+
+SELECT  ?Canals ?From_Barrage ?In_Division ?Of_Province ?Under_Management_Of_Irrigation_Authority
+	WHERE { ?Canals sm:CanalDischargeFromRiver <https://sites.google.com/view/smfis#Indus_River> .
+	?Canals sm:CanalDischargeAt  ?From_Barrage  .
+	?Canals sm:LocatedInDivision  ?In_Division  .
+	?Canals sm:LocatedInProvince  ?Of_Province  .
+	?Canals sm:IsManagedBy  ?Under_Management_Of_Irrigation_Authority  .
+	
+}
+
+

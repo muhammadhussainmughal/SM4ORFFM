@@ -1,0 +1,11 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sm:<https://sites.google.com/view/smfis#>
+SELECT ?Barrage1 ? Barrage2  ? Barrage3 ? Barrage4 ? Barrage5 .
+	WHERE { ?Barrage1 sm:HasPredecessorBarrage ? Barrage2 .
+? Barrage2 sm:HasPredecessorBarrage ? Barrage3 .
+  	? Barrage3 sm:HasPredecessorBarrage ? Barrage4 .                 
+? Barrage4 sm:HasPredecessorBarrage ? Barrage5 .
+}	

@@ -1,0 +1,11 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sm:<https://sites.google.com/view/smfis#>
+SELECT ?canal ?Division ?Province ?Barrage ?River
+	WHERE { ?canal sm:LocatedInDivision ?Division .
+  	                  ?canal sm:LocatedInProvince  ?Province  .
+	?canal sm:CanalDischargeAt ?Barrage .
+	?canal sm:CanalDischargeFromRiver ?River .
+}
